@@ -1,0 +1,104 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+}
+
+#body {
+  margin-top: 0;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(orangered), to(black));
+  background: linear-gradient(orangered, black);
+}
+
+.top {
+  background-color: orangered;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+.top .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top .wrapper .content {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.top .wrapper .left {
+  height: 100px;
+  background-color: palegreen;
+}
+
+.top .wrapper .right {
+  height: 100px;
+  background-color: orchid;
+}
+
+.top .wrapper form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.top .wrapper form .content {
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+  border: 2px solid gray;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top .wrapper form .content button {
+  width: 100%;
+  border: none;
+  background: none;
+}
+
+.top .wrapper form .content input {
+  background: none;
+  border: none;
+  padding: 6px;
+  background-color: orangered;
+}
+
+.top .wrapper form .content input:focus {
+  color: black;
+  outline: none;
+}
+/*# sourceMappingURL=App.css.map */
