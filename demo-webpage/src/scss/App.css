@@ -7,98 +7,155 @@
   font-weight: 800;
 }
 
-#body {
-  margin-top: 0;
+.wrapper {
+  height: 100%;
   width: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(orangered), to(black));
-  background: linear-gradient(orangered, black);
-}
-
-.top {
-  background-color: orangered;
-  padding: 5px 10px;
-  width: 100%;
-}
-
-.top .wrapper {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.top .wrapper .content {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-}
-
-.top .wrapper .left {
-  height: 100px;
-  background-color: palegreen;
-}
-
-.top .wrapper .right {
-  height: 100px;
-  background-color: orchid;
-}
-
-.top .wrapper form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
 }
 
-.top .wrapper form .content {
-  padding: 10px;
-  margin: 10px;
+.wrapper .paragraph {
+  height: 150px;
   width: 100%;
-  border: 2px solid gray;
-  border-radius: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 23px;
 }
 
-.top .wrapper form .content button {
+.wrapper .small {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
-  border: none;
-  background: none;
+  margin: 15px 0;
 }
 
-.top .wrapper form .content input {
-  background: none;
-  border: none;
-  padding: 6px;
-  background-color: orangered;
+.wrapper .small span {
+  margin: 0 15px;
+  color: white;
 }
 
-.top .wrapper form .content input:focus {
-  color: black;
+.wrapper .small span:nth-child(2) {
+  margin-right: auto;
+}
+
+.wrapper p {
+  color: white;
+  margin-left: 5px;
+}
+
+.app {
+  background: url(/./src/images/night.jpg);
+  background-size: cover;
+  background-position: bottom;
+  -webkit-transition: 0.4 ease;
+  transition: 0.4 ease;
+  height: 100%;
+}
+
+.app.warm {
+  background: url(/src/images/land.jpg);
+  background-size: cover;
+}
+
+.main-app {
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.75)));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75));
+  padding: 25px;
+}
+
+.main-app .search-box {
+  width: 100%;
+}
+
+.main-app .search-box .search-bar {
+  display: block;
+  width: 100%;
+  padding: 15px;
   outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: none;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-top: -25px;
+  -webkit-box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  color: black;
+  -webkit-transition: 0.4 ease;
+  transition: 0.4 ease;
+}
+
+.main-app .search-box .search-bar:focus {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.main-app .location-box {
+  margin-top: 30px;
+}
+
+.main-app .location-box .location {
+  color: white;
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.main-app .location-box .date {
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+  text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+}
+
+.main-app .weather-box {
+  text-align: center;
+}
+
+.main-app .weather-box .temp {
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 15px 25px;
+  font-size: 40px;
+  color: white;
+  font-weight: 900;
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+  -webkit-box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.main-app .weather-box .weather {
+  color: white;
+  font-size: 26px;
+  font-weight: 700;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 }
 /*# sourceMappingURL=App.css.map */

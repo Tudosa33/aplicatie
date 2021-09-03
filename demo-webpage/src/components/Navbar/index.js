@@ -1,45 +1,44 @@
 import React from 'react'
-import {Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks} from './NavbarElements'
+import {Nav, NavbarContainer, NavLogo, WebIcon, MobileIcon, NavMenu, NavItem, NavLinks, NavSmallContainer, NavBtnLink, Left, Right} from './NavbarElements'
 import {FaBars} from 'react-icons/fa'
+import { IconContext } from 'react-icons/lib'
 
-const Navbar = () => {
+const Navbar = ({ toggle}) => {
     return (
         <>
-            <Nav>
-                <NavbarContainer>
-                    <NavLogo to="/">Cevaaaaaa</NavLogo>
-                    <MobileIcon>
-                        <FaBars/>
-                    </MobileIcon>
-                    <NavMenu>
-                        <NavItem>
-                            <NavLinks to="about">News</NavLinks>
-                        </NavItem>
-                        <NavItem>
-                            <NavLinks to="about">Forecast</NavLinks>
-                        </NavItem>
-                    </NavMenu>
-                </NavbarContainer>
-            </Nav>
-            <div id="body">
-                <main class="top">
-                    <div class="wrapper">
-                        <form>
-                            <div class="content">
-                                <label for="name">Name</label>
-                                <input type='text' id="name" name="name"/>
-                            </div>
-                            <div class="content">
-                                <label for="email">Email</label>
-                                <input type='email' id="email" name="mail"/>
-                            </div>
-                            <div class="content">
-                                <button type="submit">Continue</button>
-                            </div>
-                        </form>
-                    </div>
-                </main>
-            </div>
+            <IconContext.Provider value={{color: 'white'}}>
+                <Nav>
+                    <NavbarContainer>
+                        <Left>
+                        <WebIcon onClick={toggle}>
+                            <FaBars/>
+                        </WebIcon>
+                        <NavMenu>
+                            <NavItem>
+                                <NavLinks to="about">News</NavLinks>
+                            </NavItem>
+                            <NavItem>
+                                <NavLinks to="forecast">Forecast</NavLinks>
+                            </NavItem>
+                            <NavItem>
+                                <NavLinks to="signup">SignUp</NavLinks>
+                            </NavItem>
+                        </NavMenu>
+                        <MobileIcon onClick={toggle}>
+                            <FaBars/>
+                        </MobileIcon>
+                        </Left>
+                        <NavLogo to="/">N</NavLogo>
+                        <Right>
+                        <NavSmallContainer>
+                            <NavBtnLink >Search</NavBtnLink>
+                            <NavBtnLink >Profile</NavBtnLink>
+                            <NavBtnLink >Inbox</NavBtnLink>
+                        </NavSmallContainer>
+                        </Right>
+                    </NavbarContainer>
+                </Nav>
+            </IconContext.Provider>
         </>
     )
 }
