@@ -1,9 +1,9 @@
 import React from 'react'
-import {Nav, NavbarContainer, NavLogo, WebIcon, MobileIcon, NavMenu, NavItem, NavLinks, NavSmallContainer, NavBtnLink, Left, Right} from './NavbarElements'
+import {Nav, NavbarContainer, NavLogo, WebIcon, MobileIcon, NavSmallContainer, NavBtnLink, Left, Right} from './NavbarElements'
 import {FaBars} from 'react-icons/fa'
 import { IconContext } from 'react-icons/lib'
 
-const Navbar = ({ toggle}) => {
+const Navbar = ({toggle}) => {
     return (
         <>
             <IconContext.Provider value={{color: 'white'}}>
@@ -13,17 +13,6 @@ const Navbar = ({ toggle}) => {
                         <WebIcon onClick={toggle}>
                             <FaBars/>
                         </WebIcon>
-                        <NavMenu>
-                            <NavItem>
-                                <NavLinks to="about">News</NavLinks>
-                            </NavItem>
-                            <NavItem>
-                                <NavLinks to="forecast">Forecast</NavLinks>
-                            </NavItem>
-                            <NavItem>
-                                <NavLinks to="signup">SignUp</NavLinks>
-                            </NavItem>
-                        </NavMenu>
                         <MobileIcon onClick={toggle}>
                             <FaBars/>
                         </MobileIcon>

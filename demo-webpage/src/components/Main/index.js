@@ -1,4 +1,5 @@
 import React from 'react'
+import ChartGrafic from '../Chart/chartGrafic'
 import WeatherApp from '../Weather/weather'
 import { HeroContainer, HeroBg, AppWeather, Graphic, GridContainer, GridItem } from './MainElements'
 
@@ -32,6 +33,9 @@ const Main = () => {
                     <GridItem className="patru"></GridItem>
                     <GridItem className="cinci"></GridItem>
                 </GridContainer>
+            </Graphic>
+            <Graphic>
+                <ChartGrafic/>
             </Graphic>
         </>
     )

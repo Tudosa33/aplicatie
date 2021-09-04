@@ -7,10 +7,10 @@ const api = {
 const WeatherApp = () => {
     const [query, setQuery] = useState('');
     const [weather, setWeather] = useState({});
-    const search = evt => {
-        if(evt.key === "Enter") {
+    const search = data => {
+        if(data.key === "Enter") {
             fetch(`${api.base}weather?q=${query}&units=metric&appid=${api.key}`)
-                .then(res => res.json())
+                .then(response => response.json())
                 .then(result => {
                     setWeather(result)
                     setQuery('')

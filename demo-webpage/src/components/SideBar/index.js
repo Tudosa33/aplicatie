@@ -19,7 +19,7 @@ const Sidebar = ({isOpen, toggle}) => {
                         Forecast
                     </SidebarLink>
                     <SidebarLink to='/signup' onClick={toggle}>
-                        Sign Up
+                        Sign In
                     </SidebarLink>
                 </SidebarMenu>
                 <SideBtnWrap>
